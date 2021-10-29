@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMovieList</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href="Images/MyMovieList_Logo.png"/>
+    <script src="https://kit.fontawesome.com/ec981e986a.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <h1>MyMovieList</h1> 
+    <div class="search">
+        <input type="text" id="userinput" oninput="findMovie(this)" placeholder="Find a movie"/>
+        <i class="fas fa-search"></i>
+    </div>
+    
+    <h2>Highest Rated Movies In 2021</h2>
+    <section id="movies-list">
+        <!--Box-1-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="one" src= "Images/one.jpg">
+            </div> 
+            <h3>76 DAYS</h3>
+        </div>   
+        <!--Box-2-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="two" src= "Images/two.jpg">
+            </div> 
+            <h3>QUO VADIS, AIDA?</h3>
+        </div>
+        <!--Box-3-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="three" src= "Images/three.jpg">
+            </div> 
+            <h3>IDENTIFYING FEATURES</h3>
+        </div>
+        <!--Box-4-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="four" src= "Images/four.jpg">
+            </div> 
+            <h3>SLALOM</h3>
+        </div>
+        <!--Box-5-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="five" src= "Images/five.jpg">
+            </div> 
+            <h3>MAYOR</h3>
+        </div>
+        <!--Box-6-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="six" src= "Images/six.jpg">
+            </div> 
+            <h3>SABAYA</h3>
+        </div>
+        <!--Box-7-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="seven" src= "Images/seven.jpg">
+            </div> 
+            <h3>CHANGING THE GAME</h3>
+        </div>
+        <!--Box-8-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="eight" src= "Images/eight.png">
+            </div> 
+            <h3>WOODLANDS DARK AND DAYS BEWITCHED: A HISTORY OF FOLK HORROR</h3>
+        </div>
+        <!--Box-9-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="nine" src= "Images/nine.jpg">
+            </div> 
+            <h3>PAPER SPIDERS</h3>
+        </div>
+        <!--Box-10-->
+        <div class="movies-box">
+            <!--img-->
+            <div class="movies-img">
+                <img id="ten" src= "Images/ten.jpg">
+            </div> 
+            <h3>SUMMER OF SOUL(...OR, WHEN THE REVOLUTION COULD NOT BE TELEVISED)</h3>
+        </div>
+    </section>
+        <div id="Modal1" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal1");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("one");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        <section>
+            <div id="Modal2" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img02">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal2");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("two");
+            var modalImg = document.getElementById("img02");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[1];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal3" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img03">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal3");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("three");
+            var modalImg = document.getElementById("img03");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[2];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal4" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img04">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal4");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("four");
+            var modalImg = document.getElementById("img04");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[3];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal5" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img05">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal5");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("five");
+            var modalImg = document.getElementById("img05");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[4];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal6" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img06">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal6");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("six");
+            var modalImg = document.getElementById("img06");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[5];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal7" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img07">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal7");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("seven");
+            var modalImg = document.getElementById("img07");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[6];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal8" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img08">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal8");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("eight");
+            var modalImg = document.getElementById("img08");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[7];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal9" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img09">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal9");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("nine");
+            var modalImg = document.getElementById("img09");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[8];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+        <section>
+            <div id="Modal10" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img10">
+            <div id="caption">
+                <h5>76 DAYS</h5>
+                <p><b>Health care workers and patients combat the COVID-19 outbreak during a lockdown in Wuhan, China.</b></p>
+                <p>RATING: <b>100%</b> </p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("Modal10");
+            
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("ten");
+            var modalImg = document.getElementById("img10");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[9];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+        </script>
+        </section>
+</div>
+</body>
+<footer>
+    <h4>
+        All datas are taken from Rotten Tomatoes
+    </h4>
+</footer>
+</html>
